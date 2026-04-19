@@ -1,2 +1,2 @@
 # Shh nothing to see here...
-# Looking at the filenames is cheating :)
+# Copying the filenames is cheating :)
