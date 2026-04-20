@@ -9,17 +9,37 @@
 <body>
   <main class="terminal">
     <pre id="terminal-output"></pre>
-    <span class="cursor">█</span>
-
-    <!-- Developer note: final clue = "What's up guys it's ______________" -->
-
-    <p id="status">waiting for input...</p>
-
-    <label for="guess">enter path</label>
+    <br>
+    <hr>
+    <br>
+    <label for="guess">Directory Path: </label>
     <input id="guess" autocomplete="off" spellcheck="false">
     <button id="go">proceed</button>
   </main>
+  <script>
+  async function runSequence() {
+    await typeLine("> SYSTEM ACCESS GRANTED");
+    await delay(500);
+    await typeLine("> Readying final challenge ---");
+    await delay(100);
+    await typeLine("> ");
+    await delay(400);
+    await typeLine("> Here is your final clue:");
+    await delay(100);
+    await typeLine("> ");
+    await delay(600);
 
-  <script src="terminal2.js"></script>
+    await typeLine("> Fetching...");
+    await delay(600);
+
+    await typeLine("> Fetching...");
+    await delay(800);
+
+    // Developer note: final clue = "What's up guys it's ______________" 
+    await typeLine("> Error: final clue inaccessible.", 30, true, true);
+  }
+  </script>
+  <script src="terminal.js"></script>
+  <script src="routing.js"></script>
 </body>
 </html>

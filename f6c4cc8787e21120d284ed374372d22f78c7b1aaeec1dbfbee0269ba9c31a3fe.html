@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Will you be my best man?</title>
+  <title>THANKS FOR PLAYING</title>
   <link rel="stylesheet" href="terminal.css">
 </head>
 <body>
@@ -11,16 +11,54 @@
     <audio id="bg-audio" autoplay>
       <source src="audio.mp3" type="audio/mpeg">
     </audio>
-    <img src="secret-image.png" alt="final image">
-    <pre>
-      Will you be my best man?
-    </pre>
+    <pre id="terminal-output"></pre>
+    <br>
+    <div class="image-row">
+      <div class="image-container">
+        <img src="slide.jpg" alt="pic1">
+      </div>
+      <div class="image-container">
+        <img src="chief_arbiter_covenant.jpg" alt="pic2">
+      </div>
+    </div>
+    <br>
+    <pre id="terminal-output-2"></pre>
   </main>
   <script>
-    window.addEventListener('click', () => {
+  window.addEventListener('click', () => {
       const audio = document.getElementById('bg-audio');
       audio.play().catch(() => {});
       }, { once: true });
+
+  async function runSequence() {
+    await typeLine("> USER AUTHORIZED");
+    await delay(200);
+    await typeLine("> IDENTITY CONFIRED: 'Miketheanomaly'");
+    await delay(50);
+    await typeLine("> AKA: 'mi147'");
+    await delay(50);
+    await typeLine("> AKA: 'Spartan-II M16'");
+    await delay(50);
+    await typeLine("> AKA: 'The brick that flew pretty good'");
+    await delay(50);
+    await typeLine("> AKA: 'The No-Scope Ninja of Beaver Creek'");
+    await delay(50);
+    await typeLine("> AKA: 'The one who made everything I've managed to do possible...'");
+    await delay(50);
+    await typeLine("> ...and the coolest best friend from here to The Ark.");
+    await delay(500);
+    
+    await typeLine("> Would you do me the great honor of being my LVxuHYr7Urm19dNbaQdilw?", 30, false, false, "terminal-output-2");
+    await delay(200);
+    await typeLine(">", 30, false, false, "terminal-output-2");
+    await delay(200);
+    await typeLine("> Whoops, left that 128-bit AES encrypted by mistake... silly me.", 30, false, false, "terminal-output-2");
+    await delay(200);
+    await typeLine("> Guess you'll need the secret key!  Give me a call ;)", 30, false, false, "terminal-output-2");
+    await delay(200);
+    await typeLine("> P.S. Thanks for playing :D", 30, false, false, "terminal-output-2");
+  }
   </script>
+  <script src="terminal.js"></script>
 </body>
 </html>

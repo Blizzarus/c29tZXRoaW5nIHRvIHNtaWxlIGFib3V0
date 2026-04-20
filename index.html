@@ -9,15 +9,37 @@
 <body>
   <main class="terminal">
     <pre id="terminal-output"></pre>
-    <span class="cursor">█</span>
-
-    <p id="status">waiting for input...</p>
-
-    <label for="guess">enter path</label>
+    <br>
+    <hr>
+    <br>
+    <label for="guess">Directory Path: </label>
     <input id="guess" autocomplete="off" spellcheck="false">
     <button id="go">connect</button>
   </main>
+  <script>
+  async function runSequence() {
+    await typeLine("> ACCESS TERMINAL ONLINE");
+    await delay(500);
 
+    await typeLine("> The invitation is open...");
+    await delay(200);
+
+    await typeLine("> Hopefully ;)");
+    await delay(600);
+    
+    await typeLine("> ");
+    await delay(100);
+    await typeLine("> Initializating ---");
+    await delay(1000);
+    await typeLine("> ");
+    await delay(100);
+    await typeLine("> ");
+    await delay(250);
+
+    await typeLine("> Initialization complete.  Enter directory path to connect.", 30, false, true);
+  }
+  </script>
   <script src="terminal.js"></script>
+  <script src="routing.js"></script>
 </body>
 </html>
