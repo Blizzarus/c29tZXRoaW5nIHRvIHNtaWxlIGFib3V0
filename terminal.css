@@ -31,3 +31,17 @@ input, button {
 a {
   color: #9cffab;
 }
+
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.error {
+  color: #ff4d4d;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Will you be my best man?</title>
+  <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+  <main class="terminal">
+    <audio id="bg-audio" autoplay>
+      <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+    <img src="secret-image.png" alt="final image">
+    <pre>
+      Will you be my best man?
+    </pre>
+  </main>
+  <script>
+    window.addEventListener('click', () => {
+      const audio = document.getElementById('bg-audio');
+      audio.play().catch(() => {});
+      }, { once: true });
+  </script>
+</body>
+</html>
